@@ -57,7 +57,7 @@ function format([n, d]) {
 }
 
 function main(args) {
-  if (args.length !== 3) throw new Error(`expected 3 arguments, got ${args.length}: usage: node convert.mjs <value> <from> <to>`);
+  if (args.length !== 3) throw new Error(`expected 3 arguments, got ${args.length} (usage: node convert.mjs <value> <from> <to>)`);
   const [text, from, to] = args;
   const value = parseDecimal(text);
   if (!value) throw new Error(`not a decimal number: ${JSON.stringify(text)}`);
