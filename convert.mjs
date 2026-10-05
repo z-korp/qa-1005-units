@@ -24,8 +24,8 @@ const value = Number(input);
 if (!decimal.test(input) || !Number.isFinite(value)) {
   fail('Value must be a finite decimal number.');
 }
-if (!units.has(from)) fail(`Unknown source unit: ${from}`);
-if (!units.has(to)) fail(`Unknown target unit: ${to}`);
+if (!units.has(from)) fail(`Unknown source unit: ${JSON.stringify(from)}`);
+if (!units.has(to)) fail(`Unknown target unit: ${JSON.stringify(to)}`);
 const [dimension, fromScale] = units.get(from);
 const [targetDimension, toScale] = units.get(to);
 if (dimension !== targetDimension) fail('Units must measure the same dimension.');
